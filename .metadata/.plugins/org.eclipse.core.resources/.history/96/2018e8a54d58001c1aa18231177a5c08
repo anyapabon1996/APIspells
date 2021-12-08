@@ -1,0 +1,30 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.SpellRepository.SpellsRepository;
+
+import antlr.collections.List;
+
+//Beans de tipo service
+@Service
+public class SpellService {
+	
+	//Atributo
+	private final SpellsRepository spellRepository; 
+
+	//Constructor que funge como conector entre capas con repository
+	@Autowired
+	public SpellService(SpellsRepository spellRepository) {
+		this.spellRepository = spellRepository;
+	}
+	
+	
+	//METODO READ
+	public List<Spell> getSpells(){
+		return spellRepository.findAll();
+	}
+	
+	
+}

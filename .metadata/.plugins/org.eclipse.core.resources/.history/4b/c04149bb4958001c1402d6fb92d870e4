@@ -1,0 +1,8 @@
+package com.example.demo.spell;
+
+public class Spells {
+
+	//Atributes
+	private String name; 
+	
+}

@@ -1,0 +1,9 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Service;
+
+//Beans de tipo service
+@Service
+public class SpellService {
+
+}

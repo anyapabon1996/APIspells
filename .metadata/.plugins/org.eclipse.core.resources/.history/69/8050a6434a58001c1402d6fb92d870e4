@@ -1,0 +1,14 @@
+package com.example.demo.spell;
+
+public class Spells {
+
+	//Atributes
+	private Integer id; 
+	private String name; 
+	private Spelltype type; 
+	private MinisterQualification legal;
+	
+	
+	
+	
+}

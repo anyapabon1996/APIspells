@@ -1,0 +1,33 @@
+package com.example.demo.spell;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Spells {
+
+	//Atributes
+	//Los siguientes 3 @ indican que el campo Id será el mismo que el de la BB.DD, se autoincrementa solo de a 1, y es requerido e inmodificable
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(nullable = false, updatable = false)
+	private Integer id; 
+	private String name; 
+	private Spelltype type; 
+	private MinisterQualification legal;
+	private boolean teachable; 
+	private Integer ageLearning; 
+	
+	//Constructo Vacio
+	public Spells() {
+		
+	}
+	
+	
+	
+	
+	
+}

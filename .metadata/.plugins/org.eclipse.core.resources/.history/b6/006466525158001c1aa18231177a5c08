@@ -1,0 +1,38 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Spells;
+import com.example.demo.service.SpellService;
+
+import java.util.List;
+
+@RequestMapping("spellAPI/v1")
+@RestController
+public class SpellController {
+	
+	//Atributo
+	private final SpellService spellSerive; 
+	
+	//Constructor que funge como conexion con el service
+	@Autowired
+	public SpellController(SpellService spell) {
+		this.spellSerive = spell;
+	}
+	
+	
+	//METODO READ
+	@GetMapping("allSpells")
+	public List<Spells> getSpells() {
+		return spellSerive.getSpells();
+	} 
+	
+	
+	@GetMapping("/uniqueSpell/{id}")
+	public Optional<Spells> getSpellsById(@PathVariable Integer id){
+		return spellSerive.getSpellByID(id);
+	}
+}

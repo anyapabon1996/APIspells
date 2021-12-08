@@ -1,0 +1,7 @@
+package com.example.demo.spell;
+
+public enum type {
+	
+	Murdering, Protecting, Homelike, SelfDefense, Healthing, Suffering, Enchanting
+	
+}

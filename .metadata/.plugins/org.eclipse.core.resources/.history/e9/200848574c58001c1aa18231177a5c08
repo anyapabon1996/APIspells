@@ -1,0 +1,14 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.SpellRepository.SpellsRepository;
+
+//Beans de tipo service
+@Service
+public class SpellService {
+	
+	//Atributo de conexion
+	private final SpellsRepository spellRepository; 
+
+}

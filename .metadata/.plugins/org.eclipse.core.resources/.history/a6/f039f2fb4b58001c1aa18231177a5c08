@@ -1,0 +1,9 @@
+package com.example.demo.SpellRepository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.spell.Spells;
+
+public interface SpellsRepository extends JpaRepository<Spells, Integer>{
+
+}
