@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +10,7 @@ import javax.persistence.Id;
 
 //Entidad que sera parte de una tabla en nuestra BB.DD
 @Entity
-public class Spells {
+public class Spells implements Serializable {
 
 	//Atributes
 	//Los siguientes 3 @ indican que el campo Id será el mismo que el de la BB.DD, se autoincrementa solo de a 1, y es requerido e inmodificable
